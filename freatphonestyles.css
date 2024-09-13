@@ -28,6 +28,20 @@
      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
  }
 
+ .list-column {
+    padding: 1%;
+     border-radius: 8px;
+    font-weight: bold;
+    color: #1E0000;
+ }
+
+ .list-container {
+    display: flex;
+    flex-direction: column; /* Stack image and label vertically */
+    align-content: left; /* Center content horizontally */
+}
+
+
 .image-container {
     display: flex;
     flex-direction: column; /* Stack image and label vertically */
@@ -86,14 +100,11 @@ header {
 }
 
 .logo {
-    max-width: 20%; 
+    max-width: 30%; 
+    max-width: 150px;
     min-width: 20%;
     height: auto; /* Maintains the aspect ratio */
     padding: 0%;
-}
-
-#nav-img {
-  max-width:;
 }
 
 .screenshot {
@@ -107,13 +118,13 @@ header {
     flex-wrap: wrap;
     justify-content: center;
     background-color: #ff8000;
-    padding: 1rem;
+  
 }
 
 nav a {
     text-decoration: none;
     color: #1E0000;
-    margin: 0 1rem;
+  
 }
 
 
