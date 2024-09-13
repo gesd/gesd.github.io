@@ -1,0 +1,125 @@
+/* styles.css */
+
+/* Set up the grid container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Up to 3 columns, responsive */
+    gap: 20px; /* Spacing between items */
+    padding: 20px;
+    max-width: 1200px; /* Optional: Limit the container width */
+    margin: 0 auto; /* Center the container horizontally */
+    flex-direction: column;
+}
+
+/* Style the paragraph text column */
+.text-column {
+   background-color: #FDF5E6 ;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* as text column but centered */
+.email-column {
+   text-align: center;
+    place-content: center;
+    background-color: #FDF5E6 ;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ }
+
+.image-container {
+    display: flex;
+    flex-direction: column; /* Stack image and label vertically */
+    align-items: center; /* Center content horizontally */
+}
+
+/* Style the image column */
+.image-column {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Up to 6 columns, responsive */
+    gap: 10px;
+ justify-items: center;
+ align-items: center;
+}
+
+/* Style individual images */
+.image-column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+/* Style the image labels */
+.image-label {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+
+/* END GRID */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2E9D8;
+}
+
+header {
+    background-color:  #1E0000;
+    color: #F8B10B;
+    text-align: center;
+    padding: 2rem;
+   
+}
+
+.subhead {
+   padding: 1%;
+   font-weight: bold;
+  color: #1E0000;
+  background-color: #FDF5E6 ;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  align-items: center;
+  align-self: center;
+  text-align: center;
+}
+
+.logo {
+    max-width: 20%; 
+    min-width: 20%;
+    height: auto; /* Maintains the aspect ratio */
+    padding: 0%;
+}
+
+#nav-img {
+  max-width:;
+}
+
+.screenshot {
+    flex: 1;
+     max-width:100%; 
+ }
+
+ nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #ff8000;
+    padding: 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1E0000;
+    margin: 0 1rem;
+}
+
+
+footer {
+    text-align: center;
+    background-color: #1E0000;
+    color: #F8B10B;
+    padding: 1rem;
+}
