@@ -24,7 +24,38 @@ main {
     padding: 2rem;
 }
 
-#email-section, #tester-links, #video-section {
+/* Embedded Google Form Styling */
+#email-section iframe {
+    border: none; /* Remove default border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a soft shadow for depth */
+    border-radius: 10px; /* Round the corners */
+    width: 100%; /* Make it responsive */
+    max-width: 600px; /* Limit the max width */
+    height: 500px; /* Adjust height as needed */
+}
+
+#email-section {
+    background-color: #FBDFA6; /* Light color */
+    padding: 2rem;
+    margin: 2rem auto;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Section shadow for consistency */
+}
+
+#email-section h2 {
+    color: #251A00; /* Dark color */
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+#email-section p {
+    color: #251A00; /* Dark color */
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+#tester-links, #video-section {
     margin: 2rem 0;
     text-align: center;
 }
