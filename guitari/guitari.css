@@ -4,7 +4,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #648EA9; /* Light color */
+    background-color: #7D8683; /* Light color */
     color: #251A00; /* Dark color */
 }
 
@@ -115,6 +115,15 @@ main {
 .tester-icon {
     width: 50px;
     height: 50px;
+}
+
+/* Responsive YouTube Embed */
+#video-section iframe {
+    width: 100%;
+    max-width: 800px; /* Adjust based on your design */
+    height: auto;
+    aspect-ratio: 16 / 9; /* Ensures correct proportions */
+    border-radius: 10px; /* Optional: Adds smooth edges */
 }
 
 footer {
