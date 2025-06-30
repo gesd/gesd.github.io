@@ -1,0 +1,61 @@
+:root {
+    --egg-white: #FAF3E0;
+    --yolk-soft: #FFD700;
+    --yolk-hard: #DAA520;
+    --boiling-water: #0077B6;
+    --background-dark: #121212;
+    --steam-gray: #3A3A3A;
+    --accent-orange: #EB9234;
+    --eggshell: #C4B199;
+  }
+  
+  body {
+    background-color: var(--background-dark);
+    color: var(--egg-white);
+    font-family: 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 12px var(--steam-gray);
+  }
+  
+  h1 {
+    color: var(--yolk-soft);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  .highlight {
+    color: var(--accent-orange);
+  }
+  
+  .icon-container {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .icon-placeholder {
+    width: 100px;
+    height: 100px;
+    background-color: var(--yolk-hard);
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 0 6px var(--yolk-soft);
+    line-height: 100px;
+    font-weight: bold;
+    color: var(--background-dark);
+    text-align: center;
+  }
+
+  .app-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 15%;
+    box-shadow: 0 0 6px var(--yolk-soft);
+  }
