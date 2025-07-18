@@ -1,0 +1,88 @@
+:root {
+  --egg-white: #FAF3E0;
+  --yolk-soft: #FFD700;
+  --yolk-hard: #DAA520;
+  --boiling-water: #0077B6;
+  --background-dark: #121212;
+  --steam-gray: #3A3A3A;
+  --accent-orange: #EB9234;
+  --success-green: #4CAF50;
+  --eggshell: #C4B199;
+}
+
+body {
+  background-color: var(--background-dark);
+  color: var(--egg-white);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.icon-placeholder {
+  width: 100px;
+  height: 100px;
+  background-color: var(--yolk-hard);
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  box-shadow: 0 0 8px var(--yolk-soft);
+  line-height: 100px;
+  font-weight: bold;
+  color: var(--background-dark);
+  text-align: center;
+}
+
+h1 {
+  color: var(--yolk-soft);
+  font-size: 2.2rem;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.highlight {
+  color: var(--accent-orange);
+  font-weight: bold;
+}
+
+.screenshot-container {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.screenshot {
+  width: 200px;
+  height: 400px;
+  background-color: var(--steam-gray);
+  border-radius: 12px;
+  box-shadow: 0 0 6px var(--boiling-water);
+}
+
+.cta {
+  background-color: var(--success-green);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text
+}
+
+  .app-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 15%;
+    box-shadow: 0 0 6px var(--yolk-soft);
+  }
