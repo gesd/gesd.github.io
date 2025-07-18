@@ -24,6 +24,8 @@ header {
   padding: 2rem 1rem;
 }
 
+
+
 .icon-placeholder {
   width: 100px;
   height: 100px;
@@ -40,6 +42,7 @@ header {
 h1 {
   color: var(--yolk-soft);
   font-size: 2.2rem;
+  animation: bounceIn 3s ease-out;
 }
 
 main {
@@ -72,12 +75,21 @@ section {
   box-shadow: 0 0 6px var(--boiling-water);
 }
 
+@keyframes pulse {
+  0%   { transform: scale(1); }
+  50%  { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
 .cta {
-  background-color: var(--success-green);
-  color: white;
-  padding: 1rem;
-  border-radius: 8px;
-  text
+  background: linear-gradient(145deg, var(--yolk-soft), var(--accent-orange));
+  color: var(--background-dark);
+  padding: 1.5rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  animation: pulse 5s infinite;
+  transition: transform 0.3s ease;
 }
 
   .app-icon {
@@ -85,4 +97,21 @@ section {
     height: 100px;
     border-radius: 15%;
     box-shadow: 0 0 6px var(--yolk-soft);
+    animation: eggWobble 4s infinite;
+    transition: transform 0.3s ease;
   }
+
+  @keyframes eggWobble {
+  0%, 100% { transform: rotate(0deg); }
+  25% { transform: rotate(1deg); }
+  50% { transform: rotate(-1deg); }
+  75% { transform: rotate(1deg); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  60% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+
