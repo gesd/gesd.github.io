@@ -1,4 +1,28 @@
 /* styles.css */
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', Arial, sans-serif;
+    color: #232323;
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.gradient-bg {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    z-index: 0;
+    background: linear-gradient(120deg, #f9d423 0%, #ff4e50 100%);
+    animation: gradientMove 8s ease-in-out infinite alternate;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -10,6 +34,7 @@ body {
 header {
     background-color:   #000000;
     color: white;
+      border-radius: 1.5em;            /* Rounded corners */
     text-align: center;
     padding: 2rem;
 }
@@ -114,6 +139,184 @@ img {
     margin-bottom: 10px;
     max-width: 90%;
     height: auto;
+}
+
+.main-content {
+    position: relative;
+    z-index: 1;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 2rem 1rem 0 1rem;
+}
+
+.site-title {
+    font-size: 2.7rem;
+    font-weight: 800;
+    margin-bottom: 0.2em;
+    letter-spacing: 1px;
+    color: #232323;
+    text-shadow: 0 2px 12px #fff7, 0 1px 0 #fff;
+    animation: fadeInDown 1s cubic-bezier(.77,0,.18,1.01);
+}
+
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: #444;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    animation: fadeInDown 1.2s 0.2s backwards;
+}
+
+.site-title-card {
+    background: rgba(255, 255, 255, 0.082); /* Light, slightly see-through */
+    border-radius: 1.5em;
+    box-shadow: 0 4px 24px 0 #0002;
+    padding: 2.2em 2em 1.2em 2em;
+    margin-bottom: 2.5rem;
+    max-width: 480px;
+    width: 100%;
+    text-align: center;
+    animation: fadeInDown 1s cubic-bezier(.77,0,.18,1.01);
+}
+
+.apps-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 420px;
+    margin-bottom: 2.5rem;
+}
+
+.app-card {
+    background: rgba(255,255,255,0.92);
+    border-radius: 1.2em;
+    box-shadow: 0 4px 24px 0 #0002;
+    padding: 1.3em 1.5em;
+    text-decoration: none;
+    color: #232323;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.18s, box-shadow 0.18s, background 0.18s;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    animation: fadeInUp 1s cubic-bezier(.77,0,.18,1.01);
+}
+
+.app-card:hover, .app-card:focus {
+    transform: translateY(-4px) scale(1.03) rotate(-1deg);
+    box-shadow: 0 8px 32px 0 #0003;
+    background: #fffbe9;
+    border-color: #f9d423;
+}
+
+.app-title {
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-bottom: 0.2em;
+    letter-spacing: 0.5px;
+}
+
+.app-desc {
+    font-size: 1rem;
+    color: #666;
+    opacity: 0.85;
+}
+
+.app-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 1em;
+    margin-bottom: 0.7em;
+    box-shadow: 0 2px 8px #0001;
+    background: #fff;
+    object-fit: cover;
+}
+
+.placeholder-img-container {
+    margin: 2.5rem 0 2rem 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.placeholder-img {
+    width: 220px;
+    max-width: 80vw;
+    border-radius: 1.5em;
+    box-shadow: 0 2px 16px #0002;
+    opacity: 0.95;
+    filter: grayscale(0.2) contrast(1.1);
+    animation: fadeInUp 1.2s 0.2s backwards;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(40px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+.main-footer {
+    margin-top: auto;
+    padding: 2rem 0 1rem 0;
+    text-align: center;
+    width: 100%;
+}
+
+.follow-us {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 0.7rem;
+    animation: fadeInUp 1.2s 0.4s backwards;
+}
+
+.social-icon {
+    width: 32px;
+    height: 32px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #fff;
+    box-shadow: 0 2px 8px #0001;
+    transition: transform 0.18s, box-shadow 0.18s;
+    margin-left: 0.2em;
+}
+
+.social-icon:hover {
+    transform: scale(1.13) rotate(-8deg);
+    box-shadow: 0 4px 16px #0002;
+    background: #f9d423;
+}
+
+.copyright {
+    font-size: 0.95rem;
+    color: #444;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 600px) {
+    .apps-list {
+        max-width: 98vw;
+    }
+    .placeholder-img {
+        width: 90vw;
+        max-width: 98vw;
+    }
 }
 
 

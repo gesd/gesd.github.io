@@ -216,3 +216,38 @@ section {
   box-shadow: 0 0 12px var(--boiling-water);
 }
 
+/* Add to egg_styles.css */
+.centered-contact {
+  text-align: center;
+}
+
+.centered-contact .social-links {
+  justify-content: center;
+}
+
+/* Add to egg_styles.css */
+.social-links {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.social-icon {
+  width: 32px;
+  height: 32px;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.social-icon:hover {
+  transform: scale(1.15);
+}
+
+
+.social-label {
+  font-weight: 500;
+  margin-right: 0.75rem;
+  font-size: 1rem;
+}
