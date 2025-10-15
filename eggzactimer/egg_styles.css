@@ -251,3 +251,23 @@ section {
   margin-right: 0.75rem;
   font-size: 1rem;
 }
+
+.store-links {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.store-badge {
+  width: 180px;
+  max-width: 45vw;
+  height: auto;
+  display: block;
+  transition: transform 0.18s;
+}
+
+.store-badge:hover {
+  transform: scale(1.05);
+}
