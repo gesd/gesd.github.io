@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Deletion Request - TinyDoors</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #FAFAFA;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            color: #0D1B2A; /* MidnightBlue from your theme */
+            border-bottom: 2px solid #FFD54F; /* FestiveGold from your theme */
+            padding-bottom: 10px;
+        }
+        p {
+            margin-bottom: 1em;
+        }
+        .button {
+            display: inline-block;
+            background-color: #D32F2F; /* FestiveRed */
+            color: #fff;
+            padding: 12px 25px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 10px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #8E0000; /* FestiveRedDark */
+        }
+        code {
+            background-color: #E3F2FD; /* FrostBlue */
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Account & Data Deletion Request</h1>
+        <p>You have the right to request the deletion of your TinyDoors account and all associated data.</p>
+
+        <h2>What Data Will Be Deleted?</h2>
+        <p>Upon processing your request, the following information will be permanently deleted from our servers:</p>
+        <ul>
+            <li>Your account details (Name, Email, Profile Picture from your sign-in provider).</li>
+            <li>All content you have created and stored in the app, such as calendars, entries, and any associated media.</li>
+            <li>Any links between you and calendars you have sent or received.</li>
+        </ul>
+        <p>Please note that anonymized crash and analytics data, which cannot be tied to your personal account, will not be deleted.</p>
+
+        <h2>How to Request Deletion</h2>
+        <p>To initiate the deletion process, please click the button below. This will open your email client with a pre-filled message. You must send this email from the address associated with your TinyDoors account to verify your identity.</p>
+        <p>You can add your Firebase User ID (UID) to the email body to speed up the process. You can find this in the app's settings screen under "Account Info".</p>
+
+        <a id="delete-link" class="button" href="#">Request Account Deletion</a>
+
+        <p>We will process your request within 14 days and send a confirmation email once the deletion is complete.</p>
+    </div>
+
+    <script>
+        // Use JavaScript to build the mailto link to avoid spam crawlers
+        const userEmail = "samdek-app-support@googlegroups.com"; 
+        const subject = "Account Deletion Request for TinyDoors";
+        const body = `Hello,\n\nPlease delete my TinyDoors account and all associated data.\n\nMy account email is: [Please enter the email address used for your account here]\nMy Firebase UID (Optional) is: [Please enter your UID here if you have it]\n\nThank you.`;
+
+        const mailtoLink = `mailto:${userEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        
+        document.getElementById('delete-link').href = mailtoLink;
+    </script>
+
+</body>
+</html>
