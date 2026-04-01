@@ -15,20 +15,29 @@
     </header>
 
     <main>
-        <section id="about" class="info-card floating">
+        <!-- about section - origin story and design philosophy, with a toggle for mobile users to expand/collapse the content. The section should be visually distinct, perhaps with a different background color or border, to draw attention to it as an important part of the page. The toggle button should be clearly labeled and accessible, allowing users to easily read the story without overwhelming them with too much text at once on smaller screens. -->
+        <section id="about" class="info-card">
             <h2>About Guitari</h2>
-            <p>The idea began with trying to remember a chord progression without having a guitar nearby and wondering whether a phone screen could work as a fretboard. That thought led to a conversation with an experienced guitar teacher who immediately saw the potential, and the concept grew into a tool shaped by real musical experience rather than just a slick interface. Every small detail is designed to support genuine understanding and muscle memory, so time spent training on the app translates directly to better playing on a real guitar. This approach will continue to guide new features and refinements as the app evolves.</p>
+            <!-- <p class="about-hint">About Guitari</p> -->
+            <button id="about-toggle" class="feature-toggle" aria-expanded="false" aria-controls="about-detail">About Guitari</button>
+            <div id="about-detail" class="about-detail" aria-hidden="true">
+                <p>The idea began with trying to remember a chord progression without having a guitar nearby and wondering whether a phone screen could work as a fretboard. That thought led to a conversation with an experienced guitar teacher who immediately saw the potential, and the concept grew into a tool shaped by real musical experience rather than just a slick interface. Every small detail is designed to support genuine understanding and muscle memory, so time spent training on the app translates directly to better playing on a real guitar. This approach will continue to guide new features and refinements as the app evolves.</p>
+            </div>
         </section>
 
-        <section id="features" class="info-card pulse">
+        <!-- features overview section - a concise list of key features and benefits, presented in a visually engaging way. This section should highlight the unique selling points of the app, such as its ability to help users practice chord shapes and scales on the go, identify chords by forming shapes on the screen, and its optimization for both iOS and Android devices. The design should be clean and easy to read, with icons or illustrations to enhance the visual appeal and make it easier for users to quickly grasp the main advantages of using Guitari. -->
+        <section id="why" class="info-card">
             <h2>Why Guitari?</h2>
-            <ul>
+            <!-- <p class="about-hint">Why Guitari?</p> -->
+            <button id="why-toggle" class="feature-toggle" aria-expanded="false" aria-controls="why-detail">Why Guitari?</button>
+            <div id="why-detail" class="about-detail" aria-hidden="true">
+          <ul>
                   <li>Practice chord shapes, scales, and chord recognition on the go.</li>
     <li>Use Free Play mode to explore melodies when you don’t have your guitar.</li>
     <li>Identify chords by forming shapes directly on your screen.</li>
     <li>Optimised for both iOS and Android devices.</li>
     <li>Designed for fast learning and real musical confidence.</li>
-            </ul>
+            </ul> </div>
         </section>
 
         <section id="get-app" class="info-card pulse">
@@ -49,7 +58,7 @@
             <div class="qr-wrap">
                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=240x240&data=https://samsondekker.com/guitari/index.html" alt="QR code linking to samsondekker.com/guitari/index.html" class="qr-code">
             </div>
-            <p class="qr-url">https://samsondekker.com/guitari/index.html</p>
+           
         </section>
 
         <section id="full-site" class="info-card">
@@ -64,5 +73,37 @@
     </footer>
 
     <script src="scripts.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const aboutToggle = document.getElementById('about-toggle');
+            const aboutSection = document.getElementById('about');
+            const aboutDetail = document.getElementById('about-detail');
+            const whyToggle = document.getElementById('why-toggle');
+            const whySection = document.getElementById('why');
+            const whyDetail = document.getElementById('why-detail');
+
+            // about guitari button to expand
+
+            if (aboutToggle && aboutSection && aboutDetail) {
+                aboutToggle.addEventListener('click', function () {
+                    const isExpanded = aboutSection.classList.toggle('expanded');
+                    aboutToggle.setAttribute('aria-expanded', isExpanded);
+                    aboutDetail.setAttribute('aria-hidden', !isExpanded);
+                    aboutDetail.style.maxHeight = isExpanded ? aboutDetail.scrollHeight + 'px' : '0';
+                });
+            }
+
+            // why guitari button to expand
+            
+            if (whyToggle && whySection && whyDetail) {
+                whyToggle.addEventListener('click', function () {
+                    const isExpanded = whySection.classList.toggle('expanded');
+                    whyToggle.setAttribute('aria-expanded', isExpanded);
+                    whyDetail.setAttribute('aria-hidden', !isExpanded);
+                    whyDetail.style.maxHeight = isExpanded ? whyDetail.scrollHeight + 'px' : '0';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
